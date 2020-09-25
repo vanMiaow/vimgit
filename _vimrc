@@ -29,8 +29,10 @@ set foldmethod=marker
 
 " 映射
 let mapleader=','
-nnoremap <leader>t :call Test()<cr>
+nnoremap <leader>t  :call Test()<cr>
 nnoremap <leader>tr :call Trim()<cr>
+nnoremap <leader>tl :call Trim_line()<cr>
+nnoremap <leader>de :call Delete_end()<cr>
 nnoremap <leader>re :call RelapError()<cr>
 nnoremap <leader>mc :call MelcorCount()<cr>
 nnoremap <leader>sr :set filetype=_relap<cr>
@@ -62,14 +64,14 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'matrix.vim--Yang'
 Plugin 'winmanager'
-" Plugin 'minibufexpl'
 Plugin 'minibufexplorerpp'
-" Plugin 'bufexplorer.zip'
 call vundle#end()
 filetype plugin indent on
 " =========================}}}
 
 " ==== Plugin =============
+" Matrix *conflict with MiniBufExpl++
+" nnoremap <leader>mx :Matrix<cr>
 " WinManager
 let g:defaultExplorer=0
 let g:winManagerWidth=24

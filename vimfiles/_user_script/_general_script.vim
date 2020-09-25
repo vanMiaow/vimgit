@@ -13,3 +13,17 @@ function Trim()
 	endif
 	normal `yzt`x
 endfunction
+
+function Trim_line()
+	normal mx
+	if search('\v\s+$', 'c', line('.')) == 0
+		echo 'No trail.'
+	else
+		execute 'substitute/\v\s+$/'
+	endif
+	normal `x
+endfunction
+
+function Delete_end()
+	normal v$hd
+endfunction
