@@ -151,7 +151,7 @@ zm      关闭所有折叠
             finish
         endif
 中间    syn keyword/match/region ${group} ... 详见:help syn-define,syn-arguments
-        hi ${group} ...                       详见:help hilight
+        hi ${group} ...                       详见:help highlight
         hi def link ${from-group} ${to-group} 详见:help highlight-link,group-name
 结尾    let b:current_syntax = "语法规则"
 

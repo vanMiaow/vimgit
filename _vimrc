@@ -35,8 +35,9 @@ nnoremap <leader>tl :call Trim_line()<cr>
 nnoremap <leader>de :call Delete_end()<cr>
 nnoremap <leader>re :call RelapError()<cr>
 nnoremap <leader>mc :call MelcorCount()<cr>
-nnoremap <leader>sr :set filetype=_relap<cr>
 nnoremap <leader>sm :set filetype=_melcor<cr>
+nnoremap <leader>sr :set filetype=_relap<cr>
+nnoremap <leader>ss :set filetype=_simmer<cr>
 inoremap <a-k> <up>
 inoremap <a-j> <down>
 inoremap <a-h> <left>
