@@ -161,6 +161,37 @@ au BufRead,BufNewFile *.文件后缀 set filetype=语法规则
 
 ===========================================================================}}}
 
+==== IDE =================================================================={{{
+
+1.Fortran折叠
+let fortran_fold=1 program/module/subroutine/function
+let fortran_fold_conditionals=1 if/select/do
+set foldmethod=syntax 语法折叠
+set foldcolumn=3 左侧折叠指示列数
+
+2.Ctags
+下载ctags.exe并加入system32或环境变量
+命令行'ctags -R'更新当前目录下tags文件
+set tags+=(dir)添加tags文件位置,默认为目录下(即./tags)
+<c-]>跳转至定义处 <c-t>返回
+安装taglist.vim并将TagList添加到WinManager中
+
+3.Grep
+安装GNU grep和find utilities,并将GnuWin32/bin加入环境变量
+安装grep.vim
+,g -> :Grep<cr>
+具体参考grep.vim
+
+todo > completion
+	omniComplete(build-in)
+	new-omni-completion
+	NeoComplete
+	SuperTab
+
+todo > compliation
+
+===========================================================================}}}
+
 ==== 其他 ================================================================={{{
 
 1.批量注释

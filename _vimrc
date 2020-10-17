@@ -26,6 +26,11 @@ set shiftwidth=4             " 缩进宽度
 
 " 折叠
 set foldmethod=marker
+set foldlevelstart=99
+let fortran_fold=1
+ let fortran_fold_conditionals=1
+" set foldmethod=syntax | move to ftdetect/_user_syntax.vim
+" set foldcolumn=3      |
 
 " 映射
 let mapleader=','
@@ -33,6 +38,7 @@ nnoremap <leader>t  :call Test()<cr>
 nnoremap <leader>tr :call Trim()<cr>
 nnoremap <leader>tl :call Trim_line()<cr>
 nnoremap <leader>de :call Delete_end()<cr>
+nnoremap <leader>g  :Grep<cr>
 nnoremap <leader>re :call RelapError()<cr>
 nnoremap <leader>mc :call MelcorCount()<cr>
 nnoremap <leader>sm :set filetype=_melcor<cr>
@@ -66,6 +72,9 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'matrix.vim--Yang'
 Plugin 'winmanager'
 Plugin 'minibufexplorerpp'
+Plugin 'taglist.vim'
+Plugin 'grep.vim'
+" Plugin 'Visual-Mark'
 call vundle#end()
 filetype plugin indent on
 " =========================}}}
@@ -76,7 +85,7 @@ filetype plugin indent on
 " WinManager
 let g:defaultExplorer=0
 let g:winManagerWidth=24
-let g:winManagerWindowLayout='FileExplorer|'
+let g:winManagerWindowLayout='FileExplorer|TagList'
 nnoremap <leader>e :WMToggle<cr>
 " MiniBufExpl++
 let g:miniBufExplorerMoreThanOne=0
