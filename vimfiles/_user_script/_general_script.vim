@@ -15,7 +15,7 @@ function Trim()
 endfunction
 
 function Trim_line()
-	normal mx
+	normal mx0
 	if search('\v\s+$', 'c', line('.')) == 0
 		echo 'No trail.'
 	else

@@ -28,7 +28,7 @@ set shiftwidth=4             " 缩进宽度
 set foldmethod=marker
 set foldlevelstart=99
 let fortran_fold=1
- let fortran_fold_conditionals=1
+" let fortran_fold_conditionals=1
 " set foldmethod=syntax | move to ftdetect/_user_syntax.vim
 " set foldcolumn=3      |
 
@@ -91,6 +91,8 @@ nnoremap <leader>e :WMToggle<cr>
 let g:miniBufExplorerMoreThanOne=0
 let g:miniBufExplMapWindowNavVim=1
 let g:miniBufExplMapCTabSwitchBufs=1
+" Ctags
+set tags+=../tags
 " =========================
 
 " ==== Default ============{{{
