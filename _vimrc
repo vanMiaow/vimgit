@@ -24,6 +24,10 @@ set softtabstop=4            " SoftTab宽度,<Tab>或<BS>的宽度
 set noexpandtab              " 不以space取代tab
 set shiftwidth=4             " 缩进宽度
 
+" 搜索
+set ignorecase
+set smartcase
+
 " 折叠
 set foldmethod=marker
 set foldlevelstart=99
