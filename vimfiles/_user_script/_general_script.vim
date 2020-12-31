@@ -25,5 +25,5 @@ function Trim_line()
 endfunction
 
 function Delete_end()
-	normal v$hd
+	normal d$
 endfunction
