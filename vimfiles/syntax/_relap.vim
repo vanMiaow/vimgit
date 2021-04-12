@@ -3,12 +3,12 @@ if exists("b:current_syntax")
 	finish
 endif
 
-syn match relComment '\*.*'
-syn match relTitle '=.*'
-syn match relCardNumber '^\d\+'
+syn match relapComment '\*.*'
+syn match relapTitle '=.*'
+syn match relapCardNumber '^\d\+'
 
-hi relComment guifg=#808080
-hi def link relTitle      Statement
-hi def link relCardNumber Identifier
+hi relapComment guifg=#808080
+hi def link relapTitle      Statement
+hi def link relapCardNumber Identifier
 
 let b:current_syntax = "_relap"

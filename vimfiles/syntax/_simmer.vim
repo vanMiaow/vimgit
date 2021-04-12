@@ -6,34 +6,34 @@ endif
 syn case ignore
 
 " refer to fortran.vim
-syn match simNumber display "\<\d\+\(_\a\w*\)\=\>"
-syn match simFloat display "\<\d\+\.\d\+\(e[-+]\=\d\+\)\=\(_\a\w*\)\=\>"
-syn match simFloatIll display "\<\d\+[deq][-+]\=\d\+\(_\a\w*\)\=\>"
-syn match simFloatIll display "\.\d\+\([deq][-+]\=\d\+\)\=\(_\a\w*\)\=\>"
-syn match simFloatIll display "\<\d\+\.\([deq][-+]\=\d\+\)\=\(_\a\w*\)\=\>"
-syn match simFloatIll display "\<\d\+\.\d\+\([dq][-+]\=\d\+\)\=\(_\a\w*\)\=\>"
-syn region simString start=+"+ end=+"+
-syn region simStringR start=+'+ end=+'+
+syn match simmerNumber display "\<\d\+\(_\a\w*\)\=\>"
+syn match simmerFloat display "\<\d\+\.\d\+\(e[-+]\=\d\+\)\=\(_\a\w*\)\=\>"
+syn match simmerFloatIll display "\<\d\+[deq][-+]\=\d\+\(_\a\w*\)\=\>"
+syn match simmerFloatIll display "\.\d\+\([deq][-+]\=\d\+\)\=\(_\a\w*\)\=\>"
+syn match simmerFloatIll display "\<\d\+\.\([deq][-+]\=\d\+\)\=\(_\a\w*\)\=\>"
+syn match simmerFloatIll display "\<\d\+\.\d\+\([dq][-+]\=\d\+\)\=\(_\a\w*\)\=\>"
+syn region simmerString start=+"+ end=+"+
+syn region simmerStringR start=+'+ end=+'+
 
-hi def link simNumber Number
-hi def link simFloat Float
-hi def link simFloatIll simFloat
-hi simString guifg=#F5DEB3
-hi def link simStringR simString
+hi def link simmerNumber Number
+hi def link simmerFloat Float
+hi def link simmerFloatIll simmerFloat
+hi simmerString guifg=#F5DEB3
+hi def link simmerStringR simmerString
 " end
 
-" todo simComment
-"      simOperator?
+" todo simmerComment
+"      simmerOperator?
 
-syn match simPreStart '^' nextgroup=simStart skipwhite
-syn match simStart '\(RE\)\?START' contained nextgroup=simTitle skipwhite
-syn match simTitle '.*' contained
-syn match simNamelistStart '&\w\+'
-syn match simNamelistEnd '\/'
+syn match simmerPreStart '^' nextgroup=simmerStart skipwhite
+syn match simmerStart '\(RE\)\?START' contained nextgroup=simmerTitle skipwhite
+syn match simmerTitle '.*' contained
+syn match simmerNamelistStart '&\w\+'
+syn match simmerNamelistEnd '\/'
 
-hi def link simStart Underlined
-hi def link simTitle Statement
-hi def link simNamelistStart Identifier
-hi def link simNamelistEnd Comment
+hi def link simmerStart Underlined
+hi def link simmerTitle Statement
+hi def link simmerNamelistStart Identifier
+hi def link simmerNamelistEnd Comment
 
 let b:current_syntax = "_simmer"
