@@ -42,6 +42,10 @@ nnoremap <leader>t  :call Test()<cr>
 nnoremap <leader>tr :call Trim()<cr>
 nnoremap <leader>tl :call Trim_line()<cr>
 nnoremap <leader>de :call Delete_end()<cr>
+" nnoremap <leader>t  :echo 'Test.'<cr>
+" nnoremap <leader>tr mxHmy:%s/\v\s+$//g<cr>`yzt`x
+" nnoremap <leader>tl mx0:s/\v\s+$/<cr>`x
+" nnoremap <leader>de d$
 nnoremap <leader>g  :Grep<cr>
 nnoremap <leader>re :call RelapError()<cr>
 nnoremap <leader>mc :call MelcorCount()<cr>
