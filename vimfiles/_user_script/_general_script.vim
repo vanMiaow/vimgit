@@ -9,7 +9,8 @@ function Trim()
 	if search('\v\s+$') == 0
 		echo 'No trail.'
 	else
-		execute '%substitute/\v\s+$//g'
+		execute '%s/\v\s+$//g'
+		echo 'Done.'
 	endif
 	normal `yzt`x
 endfunction
@@ -19,11 +20,8 @@ function Trim_line()
 	if search('\v\s+$', 'c', line('.')) == 0
 		echo 'No trail.'
 	else
-		execute 'substitute/\v\s+$/'
+		execute 's/\v\s+$//'
+		echo 'Done.'
 	endif
 	normal `x
-endfunction
-
-function Delete_end()
-	normal d$
 endfunction

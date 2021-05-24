@@ -14,13 +14,13 @@ function MelcorCount(...)
 		echo 'Error: more than 1 arg.'
 	elseif a:1 == 'CV'
 		" echo 'CV.'
-		return 'CV:' . MelcorCountReg("^CV_ID\\s+'.+'") . ' ' " CV_ID 'CV_NAME'
+		return 'CV:' . MelcorCountReg("^CV_ID\\s+'.+'(\\s+\\d+)?") . ' ' " CV_ID #CVNAME #ICVNUM
 	elseif a:1 == 'FL'
 		" echo 'FL.'
-		return 'FL:' . MelcorCountReg("^FL_ID\\s+'.+'") . ' ' " FL_ID 'FL_NAME'
+		return 'FL:' . MelcorCountReg("^FL_ID\\s+'.+'(\\s+\\d+)?") . ' ' " FL_ID #FPNAME #IFPNUM
 	elseif a:1 == 'HS'
 		" echo 'HS.'
-		return 'HS:' . MelcorCountReg("^HS_ID\\s+'.+'") . ' ' " HS_ID 'HS_NAME'
+		return 'HS:' . MelcorCountReg("^HS_ID\\s+'.+'(\\s+\\d+)?") . ' ' " HS_ID #HSNAME #IHSNUM
 	else
 		echo 'Error: invalid arg.'
 	endif
@@ -36,8 +36,8 @@ function MelcorCountReg(reg)
 			break
 		endif
 		let s:n = s:n + 1
-		execute 'substitute/\v.*(' . a:reg . ').*/\1\!' . s:n
-		" substitute/\v.*(a:reg).*/\1\!s:n
+		execute 's/\v.*(' . a:reg . ').*/\1\!' . s:n . '/'
+		" s/\v.*(a:reg).*/\1\!s:n/
 		" .*(reg).* -> (reg)!n
 	endwhile
 	return s:n

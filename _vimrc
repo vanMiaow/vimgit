@@ -41,14 +41,14 @@ let mapleader=','
 nnoremap <leader>t  :call Test()<cr>
 nnoremap <leader>tr :call Trim()<cr>
 nnoremap <leader>tl :call Trim_line()<cr>
-nnoremap <leader>de :call Delete_end()<cr>
-" nnoremap <leader>t  :echo 'Test.'<cr>
 " nnoremap <leader>tr mxHmy:%s/\v\s+$//g<cr>`yzt`x
 " nnoremap <leader>tl mx0:s/\v\s+$/<cr>`x
-" nnoremap <leader>de d$
+nnoremap <leader>de d$
 nnoremap <leader>g  :Grep<cr>
-nnoremap <leader>re :call RelapError()<cr>
 nnoremap <leader>mc :call MelcorCount()<cr>
+nnoremap <leader>re /\v\*\*\*\*\*\*\*\*<cr>
+nnoremap <leader>sd :call SimmerProcessData()<cr>
+nnoremap <leader>st :call SimmerProcessText()<left>
 nnoremap <leader>sm :set filetype=_melcor<cr>
 nnoremap <leader>sr :set filetype=_relap<cr>
 nnoremap <leader>ss :set filetype=_simmer<cr>
@@ -69,6 +69,7 @@ let g:netrw_browse_split=4
 source $VIMRUNTIME/_user_script/_general_script.vim
 source $VIMRUNTIME/_user_script/_melcor_script.vim
 source $VIMRUNTIME/_user_script/_relap_script.vim
+source $VIMRUNTIME/_user_script/_simmer_script.vim
 " =========================
 
 " ==== Vundle ============={{{
